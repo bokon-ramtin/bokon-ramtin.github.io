@@ -1,60 +1,58 @@
 <!DOCTYPE html>
- <html>
- <head>
-	 <title>DARK</title>
-	 <meta charset="UTF-8"/>
-	 <link rel="stylesheet" href="" type="text/css"/>
-<style>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سایت دارک</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: "Arial", sans-serif;
+        }
+        h1 {
+            font-size: 48px;
+            color: #333;
+        }
+        img {
+            margin: 20px 0;
+            width: 100px;
+            height: auto;
+        }
+        .color-changing-text {
+            font-size: 24px;
+            transition: color 0.5s;
+        }
+    </style>
+</head>
+<body>
 
-body{
- background-image:url("https://s8.uupload.ir/files/hd-wallpaper-the-matrix-edge-abstract-android-black-edge-green-iphone-lights-logo-movie-the-matrix_mrve.jpg");
- text-align:center;
-}
-body{
- background-color: #000;
- color: #fff;
-}
+    <h1>دارک یادته گفتی نوبم؟</h1>
+    <br><mark><h4>گفتی تو دیداس خیلی قوی هستی و ...<dr> پس این سایت رو بلند با دیداس نبندی یعنی نوبی</h4></mark>
+    
+    <h3>اگه این سایت بسته نشد یعنی نوبی<br>پس زودتر ببندش</h3>
+    <img src="https://s8.uupload.ir/files/screenshot_۲۰۲۴۱۰۲۸_۱۷۱۱۵۲_chrome_yfc6.jpg" alt="تصویر دارک"> 
+    <p class="color-changing-text">دارک دیگه گنده گوزی نکنی</p>
+    <p class="color-changing-text" id="changing-text">دارک ساکت باش و سرت بکن تو کون خودت</p>
+    
 
-h1.MyLink {
- background-image: linear-gradient(50deg,#0650ff,#ffcb00,#0650ff);
- background-clip: text;
- -webkit-background-clip: text;
- text-fill-color: transparent;
- -webkit-text-fill-color: transparent;
- text-align: center;
- text-decoration: none;
-}
+    <script>
+        const colors = ['red', 'blue', 'green', 'orange', 'purple', 'black'];
+        let currentColorIndex = 0;
 
-h2{
- width:200px;
- margin:auto;
- background-color:#d51c00;
- color:#fff;
- padding:5px;
- text-align:center;
-}
-
-</style>
- </head>
-	 <body>
- <h1 class="MyLink">I'ɱ DARK</h1>
-<h1 style="color:#000">I AM GOD</h1>
-<h2 style="background-color:#ff263238; color:#00f;">@𝐃𝐀𝐑𝐊_𝐓𝐑𝐆</h3>
-<h3 style="color:#7fff00;"><br>﴾B̴̝̰̺͔͈̠͙̘̎́͌̊̀͆͌̔͘L̴̪͈̣̥̲̹̰̈́̈́A̴̧̛͕͔̖͓͂̂C̶͙̣̩̫͙̺̐̽̐̑̽͌͘͜Ķ̶̢͇̟̜͓̞̣̅ ̸̯͇͉̗͔͍͎̓̀́̃͗̕͘H̶͈̝͕̭͇͉̏̽͛̓͛̽̑̀̐ͅA̴̡͈͎̟̎̎̂T̵͔̠̪̃﴿<br></h3>
-
-
-<h1 id="text" style="color:black;">ℑ 𝔴𝔦𝔩𝔩 𝔫𝔬𝔱 𝔣𝔬𝔯𝔤𝔢𝔱, 𝔱𝔥𝔢𝔯𝔢 𝔦𝔰 𝔪𝔬𝔯𝔢 𝔭𝔩𝔢𝔞𝔰𝔲𝔯𝔢 𝔦𝔫 𝔯𝔢𝔳𝔢𝔫𝔤𝔢 𝔱𝔥𝔞𝔫 𝔣𝔬𝔯𝔤𝔦𝔳𝔢𝔫𝔢𝔰𝔰</h1>
-<img src="https://s8.uupload.ir/files/img_20240927_132957_760_al2k.jpg" width="150" height="150">
-
-  <script>
         function changeColor() {
-            var text = document.getElementById("text");
-            var colors = ["red", "blue", "#d51c00", "green", "purple", "orange"];
-            var randomColor = colors[Math.floor(Math.random() * colors.length)];
-            text.style.color = randomColor;
+            const textElement = document.getElementById('changing-text');
+            textElement.style.color = colors[currentColorIndex];
+            currentColorIndex = (currentColorIndex + 1) % colors.length;
         }
 
-        setInterval(changeColor, 10);
+        setInterval(changeColor, 100);
     </script>
-	 </body>
- </html>
+
+</body>
+</html>
+
